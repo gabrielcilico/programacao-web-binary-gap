@@ -1,0 +1,39 @@
+*,
+body {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", cursive;
+}
+body,
+div {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #84e, #61f);
+}
+input {
+  width: 60%;
+  border: none;
+  padding: 20px 30px;
+  font-size: 3em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 60px;
+}
+input:focus {
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+p {
+  margin-top: 25px;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #fff;
+}
