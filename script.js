@@ -14,7 +14,6 @@ function checkGaps(gaps) {
 function getBinaryGap() {
   var binary = convertToBinary();
   if (binary.match(/1.*0.*1/)) {
-    console.log("Achou: " + binary);
     return checkGaps(binary.split("1"));
   }
   return 0;
