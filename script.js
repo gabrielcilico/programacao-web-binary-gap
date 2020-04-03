@@ -20,9 +20,9 @@ function getBinaryGap() {
 }
 
 function checkNumber() {
-  var regex = /[^0-9]/;
-  var binaryValue = "";
-  var gapValue = "";
+  let regex = /[^0-9]/;
+  let binaryValue = "";
+  let gapValue = "";
   document.getElementById("value").value = document
     .getElementById("value")
     .value.replace(regex, "");
