@@ -19,19 +19,28 @@ function getBinaryGap() {
   return 0;
 }
 
-function checkNumber() {
-  let regex = /[^0-9]/;
-  let binaryValue = "";
-  let gapValue = "";
+function updateInput() {
   document.getElementById("value").value = document
     .getElementById("value")
-    .value.replace(regex, "");
-  if (document.getElementById("value").value != "") {
-    binaryValue = "Valor Binário: " + convertToBinary();
-    gapValue = "Maior gap: " + getBinaryGap();
-  }
-  document.getElementById("binary").innerHTML = binaryValue;
-  document.getElementById("gaps").innerHTML = gapValue;
+    .value.replace(/[^0-9]/, "");
 }
 
-document.getElementById("value").oninput = () => checkNumber();
+function isInputEmpty() {
+  return document.getElementById("value").value === "";
+}
+
+function getBinaryHTML() {
+  return isInputEmpty() ? "" : "Valor Binário: " + convertToBinary();
+}
+
+function getGapHTML() {
+  return isInputEmpty() ? "" : "Maior gap: " + getBinaryGap();
+}
+
+function updateGap() {
+  updateInput();
+  document.getElementById("binary").innerHTML = getBinaryHTML();
+  document.getElementById("gaps").innerHTML = getGapHTML();
+}
+
+document.getElementById("value").oninput = () => updateGap();
