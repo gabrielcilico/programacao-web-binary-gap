@@ -33,3 +33,5 @@ function checkNumber() {
   document.getElementById("binary").innerHTML = binaryValue;
   document.getElementById("gaps").innerHTML = gapValue;
 }
+
+document.getElementById("value").oninput = () => checkNumber();
