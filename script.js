@@ -1,4 +1,5 @@
 function convertToBinary() {
+  // ">>>" -> Atribuiçãode bit-a-bit deslocamento á direita não assinado
   return (document.getElementById("value").value >>> 0).toString(2);
 }
 
