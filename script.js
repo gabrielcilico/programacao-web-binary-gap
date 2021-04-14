@@ -5,9 +5,9 @@ function convertToBinary() {
 
 function checkGaps(gaps) {
   if (Array.isArray(gaps) && gaps.length > 2) {
-    gaps[0] = "";
-    gaps[gaps.length - 1] = "";
-    return gaps.sort((a, b) => b.length - a.length)[0].length;
+    gaps.shift();
+    gaps.pop();
+    return gaps.sort((a, b) => b.length - a.length).shift().length;
   }
   return gaps.length;
 }
